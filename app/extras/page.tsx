@@ -1,8 +1,8 @@
 import { getFormData } from "@/lib/actions/form-actions";
-import { PersonalInfoForm } from "@/components/forms/personal-info-form";
+import { ExtrasForm } from "@/components/forms/extras-form";
 import FormWrapper from "@/components/forms/form-wrapper";
 
-export default async function PersonalInfoPage() {
+export default async function ExtrasPage() {
   const formData = await getFormData();
 
   return (
@@ -10,17 +10,23 @@ export default async function PersonalInfoPage() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
-            Generatore README GitHub
+            Opzioni Aggiuntive
           </h1>
           <p className="text-gray-600 dark:text-gray-300">
-            Crea un README professionale per il tuo profilo GitHub
+            Personalizza le statistiche e aggiungi sezioni extra
           </p>
         </div>
 
-        <FormWrapper title={"Informazioni Personali"} description={"Inserisci le tue informazioni di base per il README"} >
-          <PersonalInfoForm
-            initialData={formData.personalInfo}
-            onNext={"/social-links"}
+        <FormWrapper
+          title={"Opzioni Aggiuntive"}
+          description={
+            "Personalizza le statistiche GitHub e aggiungi informazioni extra"
+          }
+        >
+          <ExtrasForm
+            initialData={formData.extras}
+            onNext={"/preview"}
+            onBack={"/projects"}
           />
         </FormWrapper>
       </div>
