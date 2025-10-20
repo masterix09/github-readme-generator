@@ -29,7 +29,6 @@ export function ExtrasForm({ initialData, onNext, onBack }: ExtrasFormProps) {
     handleSubmit,
     watch,
     reset,
-    formState: { errors },
   } = useForm({
     resolver: zodResolver(extrasSchema),
     defaultValues: initialData,

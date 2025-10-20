@@ -28,7 +28,6 @@ export function SkillsForm({ initialData, onNext, onBack }: SkillsFormProps) {
   const router = useRouter();
 
   const {
-    register,
     handleSubmit,
     watch,
     setValue,
