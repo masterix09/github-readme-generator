@@ -22,12 +22,12 @@ export function ThemeToggle() {
       variant="outline"
       size="sm"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className={`fixed top-4 right-4 z-50 ${theme === 'light' ? 'hover:bg-transparent' : ''}`}
+      className={`fixed top-4 right-4 z-50 ${theme === 'light' ? 'bg-blue-700 hover:bg-transparent !border-blue-700 text-white' : 'text-black bg-white'}`}
     >
       {theme === 'dark' ? (
-        <Sun className="h-4 w-4" />
+        <Sun className="h-4 w-4 text-black" />
       ) : (
-        <Moon className="h-4 w-4 text-white" />
+        <Moon className="h-4 w-4" />
       )}
     </Button>
   );

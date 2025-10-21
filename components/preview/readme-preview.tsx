@@ -50,7 +50,7 @@ export function ReadmePreview({ markdown, onBack }: ReadmePreviewProps) {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="flex gap-2 mb-4">
+          <div className="flex gap-2 mb-4 flex-col lg:flex-row">
             <Button onClick={downloadMarkdown} className="flex items-center gap-2">
               <Download className="h-4 w-4" />
               Scarica README.md
@@ -58,7 +58,7 @@ export function ReadmePreview({ markdown, onBack }: ReadmePreviewProps) {
             <Button 
               variant="outline" 
               onClick={copyToClipboard}
-              className="flex items-center gap-2"
+              className="flex items-center gap-2 "
             >
               {copied ? (
                 <>
